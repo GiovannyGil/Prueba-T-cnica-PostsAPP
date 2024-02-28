@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "f58b8042-cfe8-4b0f-9ad0-296dd0c02a57",
+		"name": "Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29027132"
+	},
+	"item": [
+		{
+			"name": "Auth Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"Giovanny Gil\",\r\n    \"age\": 23,\r\n    \"email\": \"arvey950@gmail.com\",\r\n    \"password\": \"giovanny\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NWRmNDM3MTUxMzRlNGNjY2ZmYWIyNzkiLCJpYXQiOjE3MDkxMzA4MzAsImV4cCI6MTcwOTEzNDQzMH0.oyWGNgqTCP5-DjttSpFdrZx52Le3MIo1yuXkGsOO4RU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"arvey123@example.com\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NWRmNDM3MTUxMzRlNGNjY2ZmYWIyNzkiLCJpYXQiOjE3MDkxMzA4MzAsImV4cCI6MTcwOTEzNDQzMH0.oyWGNgqTCP5-DjttSpFdrZx52Le3MIo1yuXkGsOO4RU",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"arvey123@example.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth Refresh_token",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NWRmNDM3MTUxMzRlNGNjY2ZmYWIyNzkiLCJpYXQiOjE3MDkxMzI1NzUsImV4cCI6MTcwOTEzNjE3NX0.eUoW0tbXF80gCyySDQsmCk_I5p-aBOGFu36yKMznQCI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/auth/refresh_token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"refresh_token"
+					],
+					"query": [
+						{
+							"key": "x-access-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NWRmNDM3MTUxMzRlNGNjY2ZmYWIyNzkiLCJpYXQiOjE3MDkxMzI1NzUsImV4cCI6MTcwOTEzNjE3NX0.eUoW0tbXF80gCyySDQsmCk_I5p-aBOGFu36yKMznQCI",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
